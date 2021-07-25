@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Security-Policy" script-src='unsafe-inline' content=" data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *;data: content:;">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <meta name="color-scheme" content="light dark">
+        <link rel="stylesheet" href="css/index.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css" integrity="" crossorigin="anonymous">
+        <link rel="stylesheet" href="fontawesome-free-5.15.3-web/css/all.css">
+        <title>Hello World</title>
+    </head>
+    <body>
+        <div class='content'>
+            <div id='photonTakingPage'>
+               <form>
+                 <img id='img' src='img/jk-placeholder-image.jpg' width="300px" height="200px"/>
+                 <br>
+                 <div id='buttonWrap'>
+                   <button type="button" id='takePics' class="btn btn-primary"><i class="fa fa-camera"></i></button>
+                 </div>  
+                 <br>
+                 <div class="form-group">
+                   <input type="email" class="form-control" id="title" placeholder="title">
+                   <div class='errTxt'>Please enter sth!</div>
+
+                 </div>
+                   <div class="form-group">
+                   <textarea type="email" class="form-control" id="description" placeholder="description" required></textarea>
+                   <div class='errTxt'>Please enter sth!</div> 
+                 </div>
+                 <div id='submitWrap'>
+                   <button type="button" id='uploadInfo' class="btn btn-primary">Upload</button>
+                 </div>  
+               </form>   
+            </div>
+            <div id='PostsPage'>
+                <i class="fa fa-spinner fa-spin loadingSign"></i>
+            </div>
+         </div>
+         <div class='menuWrap'>
+            <div class='MenuItem' id='firstMenuItem'>
+              <i class="fa fa-camera"></i> &nbsp Take photo
+            </div>
+            <div class='MenuItem'  id='secondMenuItem'>
+              <i class="fa fa-list"></i>&nbspPhoto List
+            </div>
+         </div>
+        <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-storage.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-database.js"></script>
+        <script src='js/JsFunctions/loadData/loadFirebase.js'></script>
+        <script src="https://unpkg.com/uuid@latest/dist/umd/uuidv4.min.js"></script>  
+        <script src="js/lib/jquery-3.5.1.slim.min.js"></script>
+        <script src="js/lib/bootstrap.min.js"></script>
+        <script src="cordova.js"></script>
+        <script src="js/index.js"></script>
+        <script src="js/JsFunctions/loadData/loadFrontend.js"></script>
+        <script src="js/JsFunctions/loadData/loadDataFromFirebase.js"></script>
+        <script src="js/JsFunctions/formSubmit.js"></script>
+        <script src="js/JsFunctions/takePics.js"></script>
+        <script src="js/JsFunctions/MenuScript.js"></script>
+        <script src="js/JsFunctions/entry.js"></script>
+    </body>
+</html>

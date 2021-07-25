@@ -1,6 +1,7 @@
 function InitLoad(content){
   //Listen the init listen on db or any update on db
   database.ref('posts/').on('value',(snapshot) => {
+    stopPaging = false;
     database.ref('posts/').limitToFirst(8).once('value', (snapshot) => {
 
         loadFrontend(snapshot,content,true);
